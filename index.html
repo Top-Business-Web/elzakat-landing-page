@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لجنة زكاة كفر طنبدي - خير يصل لمستحقيه</title>
+    <!-- Google Fonts: Cairo & Amiri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header class="site-header sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg py-2 px-0">
+                <!-- Brand Logo (Right in RTL) -->
+                <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="#">
+                    <div class="logo-icon-wrap">
+                        <img src="assets/images/logo-icon.png" alt="شعار لجنة زكاة كفر طنبدي" class="brand-emblem">
+                    </div>
+                    <div class="brand-text text-start">
+                        <span class="brand-sub d-block">لجنة زكاة</span>
+                        <span class="brand-main d-block">كفر طنبدي</span>
+                        <span class="brand-tagline d-block">خير يصل لمستحقيه</span>
+                    </div>
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="القائمة">
+                    <i class="fa-solid fa-bars fs-4 text-emerald"></i>
+                </button>
+
+                <!-- Navigation Links & Actions -->
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#hero">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">عن اللجنة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">خدماتنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contribute">طرق المساهمة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#works">المشاريع والإنجازات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#stats">التقارير</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">تواصل معنا</a>
+                        </li>
+                    </ul>
+
+                    <!-- Left Actions: Donate + Search -->
+                    <div class="nav-actions d-flex align-items-center gap-3">
+                        <button type="button" class="btn btn-emerald rounded-pill px-4 py-2 d-flex align-items-center gap-2 open-donate-modal" data-type="تبرع عام">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>تبرع الآن</span>
+                        </button>
+                        <button type="button" class="btn-search-toggle" id="searchToggleBtn" aria-label="بحث">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Collapsible Search Bar (jQuery toggled) -->
+            <div id="headerSearchBar" class="header-search-bar" style="display: none;">
+                <form class="d-flex gap-2 py-2" id="searchForm">
+                    <input type="text" class="form-control form-control-sm rounded-pill px-3" placeholder="ابحث في خدمات ومشاريع اللجنة...">
+                    <button type="submit" class="btn btn-sm btn-emerald rounded-pill px-3">بحث</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="hero-section position-relative overflow-hidden">
+        <!-- Background Photo (Left side in RTL) -->
+        <div class="hero-bg-photo" style="background-image: url('assets/images/hero-left.png');"></div>
+        <!-- Gradient Overlay from Right to Left -->
+        <div class="hero-gradient-overlay"></div>
+        <!-- Subtle Islamic Mandala Pattern on Right -->
+        <div class="hero-islamic-pattern"></div>
+
+        <div class="container position-relative z-2">
+            <div class="row align-items-center min-vh-hero">
+                <div class="col-lg-6 col-md-8 text-right">
+                    <div class="hero-content py-5">
+                        <h1 class="hero-title mb-3">
+                            عطاؤك أمانة..<br>
+                            وخيرك يصل لمستحقيه
+                        </h1>
+                        <h2 class="hero-subtitle mb-2">لجنة زكاة كفر طنبدي</h2>
+                        <p class="hero-desc mb-4">
+                            نعمل على توصيل أموال الزكاة والصدقات إلى مستحقيها،<br class="d-none d-sm-inline">
+                            وفقاً للضوابط الشرعية وبما يحفظ كرامة الأسر.
+                        </p>
+                        <div class="hero-buttons d-flex flex-wrap align-items-center gap-3">
+                            <button type="button" class="btn btn-emerald hero-btn-primary d-inline-flex align-items-center gap-2 open-donate-modal" data-type="تبرع الآن">
+                                <i class="fa-solid fa-heart"></i>
+                                <span>تبرع الآن</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-emerald hero-btn-outline d-inline-flex align-items-center gap-2 open-help-modal">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M19 8v6"></path>
+                                    <path d="M22 11h-6"></path>
+                                </svg>
+                                <span>طلب مساعدة</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ZAKAT GUIDE SECTION (عن الزكاة - Tabs) ==================== -->
+    <section id="zakat-guide" class="zakat-guide-section py-5">
+        <div class="container">
+            <!-- Section Header with Side Lines (Same style as خدماتنا) -->
+            <div class="section-header text-center mb-3">
+                <div class="title-with-lines d-inline-flex align-items-center justify-content-center gap-3 mb-2">
+                    <span class="header-line"></span>
+                    <h2 class="section-title m-0">عن الزكاة</h2>
+                    <span class="header-line"></span>
+                </div>
+                <p class="section-subtitle mb-3">ركن الإسلام الثالث.. طهارة للمال ونماء للخير وتكافل يحفظ كرامة الأسر</p>
+
+                <!-- Clean 3 Tabs Navigation -->
+                <div class="zakat-tabs-nav d-inline-flex flex-wrap justify-content-center gap-2 p-1 rounded-pill">
+                    <button type="button" class="btn zakat-tab-btn active" data-target="zakat-concept">
+                        <i class="fa-solid fa-book-quran me-1"></i>
+                        <span>فكرة الزكاة</span>
+                    </button>
+                    <button type="button" class="btn zakat-tab-btn" data-target="zakat-types">
+                        <i class="fa-solid fa-seedling me-1"></i>
+                        <span>أنواع الزكاة</span>
+                    </button>
+                    <button type="button" class="btn zakat-tab-btn" data-target="zakat-channels">
+                        <i class="fa-solid fa-hand-holding-heart me-1"></i>
+                        <span>المصارف الشرعية</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- TAB 1: فكرة الزكاة (Matches the 3-column layout of نبذة عن اللجنة) -->
+            <div class="zakat-panel" id="zakat-concept">
+                <div class="row g-3 align-items-stretch">
+                    <!-- Right Column: Photo Card -->
+                    <div class="col-lg-4">
+                        <div class="building-photo-card zakat-photo-card h-100 position-relative">
+                            <img src="assets/images/zakat-box.png" alt="فكرة الزكاة" class="w-100 h-100 object-fit-cover rounded-4">
+                            <div class="photo-ayah-overlay p-3 text-center">
+                                <span>﴿ خُذْ مِنْ أَمْوَالِهِمْ صَدَقَةً تُطَهِّرُهُمْ وَتُزَكِّيهِم بِهَا ﴾</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Middle Column: Concept & Conditions -->
+                    <div class="col-lg-4">
+                        <div class="content-box-card h-100 p-4 d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="box-title mb-2">مفهوم الزكاة وحكمتها</h3>
+                                <p class="about-description mb-3">
+                                    الزكاة لغةً هي النماء والبركة، وشرعاً حصة مقدرة من المال فرضها الله للمستحقين؛ لتطهير النفس من الشح وتحقيق التكافل بين الأسر.
+                                </p>
+                                <ul class="about-info-list list-unstyled mb-0 p-0">
+                                    <li class="d-flex align-items-center gap-2 mb-2">
+                                        <i class="fa-solid fa-scale-balanced text-emerald"></i>
+                                        <span><strong>بلوغ النصاب:</strong> ما يعادل 85 جرام ذهب عيار 21</span>
+                                    </li>
+                                    <li class="d-flex align-items-center gap-2 mb-2">
+                                        <i class="fa-regular fa-calendar-check text-emerald"></i>
+                                        <span><strong>حولان الحول:</strong> مرور عام هجري كامل على المال</span>
+                                    </li>
+                                    <li class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-shield-heart text-emerald"></i>
+                                        <span><strong>الغاية الشرعية:</strong> نماء المال وسد حاجة الفقير</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-3">
+                                <button type="button" class="btn btn-outline-emerald w-100 py-2 d-flex align-items-center justify-content-center gap-2 switch-to-channels-tab">
+                                    <i class="fa-solid fa-list-check"></i>
+                                    <span>استعرض المصارف الشرعية</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left Column: Compact Zakat Calculator -->
+                    <div class="col-lg-4">
+                        <div class="content-box-card h-100 p-4 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <h3 class="box-title m-0">حاسبة زكاة المال</h3>
+                                    <select id="zakatRateSelect" class="form-select form-select-sm w-auto zakat-rate-select">
+                                        <option value="0.025" data-label="ربع العشر 2.5%">زكاة المال (2.5%)</option>
+                                        <option value="0.10" data-label="العشر 10%">زروع بماء المطر (10%)</option>
+                                        <option value="0.05" data-label="نصف العشر 5%">زروع بالآلات (5%)</option>
+                                    </select>
+                                </div>
+                                <p class="box-subtitle mb-2" id="zakatRateSubtitle">احسب مقدار زكاتك الشرعية (ربع العشر 2.5%)</p>
+
+                                <div class="mb-2">
+                                    <label for="zakatAmountInput" class="form-label small fw-bold text-secondary mb-1">قيمة المال المدخر بالجنيه المصري</label>
+                                    <input type="text" inputmode="decimal" id="zakatAmountInput" class="form-control zakat-input-field" placeholder="أدخل المبلغ (مثال: 100000)" autocomplete="off">
+                                </div>
+
+                                <div class="calc-result-strip p-2 px-3 mb-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="small fw-bold text-dark">مقدار الزكاة المستحقة:</span>
+                                        <strong class="calc-output-val" id="zakatCalculatedVal">0 ج.م</strong>
+                                    </div>
+                                    <small class="d-block text-muted mt-1" id="zakatFormulaNote" style="font-size: 0.74rem;">أدخل المبلغ لحساب الزكاة تلقائياً</small>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-2 mt-1">
+                                <button type="button" class="btn btn-outline-emerald flex-grow-1 py-2 d-flex align-items-center justify-content-center gap-1" id="calcZakatActionBtn">
+                                    <i class="fa-solid fa-calculator"></i>
+                                    <span>احسب الزكاة</span>
+                                </button>
+                                <button type="button" class="btn btn-emerald flex-grow-1 py-2 d-flex align-items-center justify-content-center gap-1 open-donate-modal" id="payCalculatedZakatBtn" data-type="زكاة المال">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <span>أخرج زكاتك الآن</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: أنواع الزكاة (5 Image Cards matching خدماتنا & من أعمالنا) -->
+            <div class="zakat-panel" id="zakat-types" style="display: none;">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-3">
+                    <!-- Type 1: زكاة المال والذهب -->
+                    <div class="col">
+                        <div class="service-card zakat-img-card h-100 text-center overflow-hidden p-0">
+                            <div class="zakat-card-thumb position-relative">
+                                <img src="assets/images/type-money.jpg" alt="زكاة المال والذهب" class="w-100 h-100 object-fit-cover">
+                                <span class="zakat-thumb-badge">2.5%</span>
+                            </div>
+                            <div class="p-3">
+                                <h3 class="service-card-title mb-1">زكاة المال والذهب</h3>
+                                <p class="service-card-text mb-0">تجب في النقود والمدخرات والذهب والفضة بعد تمام الحول.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Type 2: عروض التجارة -->
+                    <div class="col">
+                        <div class="service-card zakat-img-card h-100 text-center overflow-hidden p-0">
+                            <div class="zakat-card-thumb position-relative">
+                                <img src="assets/images/type-trade.jpg" alt="زكاة عروض التجارة" class="w-100 h-100 object-fit-cover">
+                                <span class="zakat-thumb-badge">2.5%</span>
+                            </div>
+                            <div class="p-3">
+                                <h3 class="service-card-title mb-1">عروض التجارة</h3>
+                                <p class="service-card-text mb-0">تجب في البضائع والسلع المعدة للبيع بسعرها وقت الحول.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Type 3: الزروع والثمار -->
+                    <div class="col">
+                        <div class="service-card zakat-img-card h-100 text-center overflow-hidden p-0">
+                            <div class="zakat-card-thumb position-relative">
+                                <img src="assets/images/type-crops.jpg" alt="زكاة الزروع والثمار" class="w-100 h-100 object-fit-cover">
+                                <span class="zakat-thumb-badge">5% - 10%</span>
+                            </div>
+                            <div class="p-3">
+                                <h3 class="service-card-title mb-1">الزروع والثمار</h3>
+                                <p class="service-card-text mb-0">تُخرج يوم الحصاد بنسبة 10% بماء المطر أو 5% بالآلات.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Type 4: زكاة الأنعام -->
+                    <div class="col">
+                        <div class="service-card zakat-img-card h-100 text-center overflow-hidden p-0">
+                            <div class="zakat-card-thumb position-relative">
+                                <img src="assets/images/type-livestock.jpg" alt="زكاة الأنعام" class="w-100 h-100 object-fit-cover">
+                                <span class="zakat-thumb-badge">حسب النصاب</span>
+                            </div>
+                            <div class="p-3">
+                                <h3 class="service-card-title mb-1">زكاة الأنعام</h3>
+                                <p class="service-card-text mb-0">تجب في الإبل والبقر والغنم السائمة وفق أنصبتها الشرعية.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Type 5: زكاة الفطر -->
+                    <div class="col">
+                        <div class="service-card zakat-img-card h-100 text-center overflow-hidden p-0">
+                            <div class="zakat-card-thumb position-relative">
+                                <img src="assets/images/type-fitr.jpg" alt="زكاة الفطر" class="w-100 h-100 object-fit-cover">
+                                <span class="zakat-thumb-badge">صاع / الفرد</span>
+                            </div>
+                            <div class="p-3">
+                                <h3 class="service-card-title mb-1">زكاة الفطر</h3>
+                                <p class="service-card-text mb-0">طهرة للصائم وطعمة للمساكين وتُخرج قبل صلاة عيد الفطر.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: المصارف الشرعية (Photo Card + 8 Compact Tiles) -->
+            <div class="zakat-panel" id="zakat-channels" style="display: none;">
+                <div class="row g-3 align-items-stretch">
+                    <!-- Right Column: Photo Card -->
+                    <div class="col-lg-4">
+                        <div class="building-photo-card zakat-photo-card h-100 position-relative">
+                            <img src="assets/images/zakat-mosque.png" alt="المصارف الشرعية للزكاة" class="w-100 h-100 object-fit-cover rounded-4">
+                            <div class="photo-ayah-overlay p-3 text-center">
+                                <span>﴿ إِنَّمَا الصَّدَقَاتُ لِلْفُقَرَاءِ وَالْمَسَاكِينِ وَالْعَامِلِينَ عَلَيْهَا... ﴾ (التوبة: 60)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left Column: 8 Channels Compact Grid -->
+                    <div class="col-lg-8">
+                        <div class="content-box-card h-100 p-4 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex flex-wrap align-items-center justify-content-between mb-3">
+                                    <div>
+                                        <h3 class="box-title mb-0">المصارف الشرعية الثمانية</h3>
+                                        <p class="box-subtitle mb-0">الأصناف الذين حددهم القرآن الكريم لصرف أموال الزكاة</p>
+                                    </div>
+                                    <span class="badge rounded-pill bg-emerald-soft text-emerald px-3 py-2">سورة التوبة: آية 60</span>
+                                </div>
+
+                                <div class="row row-cols-2 row-cols-md-4 g-2">
+                                    <!-- 1. الفقراء -->
+                                    <div class="col">
+                                        <div class="channel-tile text-center p-2 py-3 h-100">
+                                            <div class="channel-tile-icon mx-auto mb-1">1</div>
+                                            <strong class="d-block channel-tile-title">الفقراء</strong>
+                                            <span class="channel-tile-sub">من لا يملكون الكفاية</span>
+                                        </div>
+                                    </div>
+                                    <!-- 2. المساكين -->
+                                    <div class="col">
+                                        <div class="channel-tile text-center p-2 py-3 h-100">
+                                            <div class="channel-tile-icon mx-auto mb-1">2</div>
+                                            <strong class="d-block channel-tile-title">المساكين</strong>
+                                            <span class="channel-tile-sub">ذوو الدخل غير الكافي</span>
+                                        </div>
+                                    </div>
+                                    <!-- 3. العاملين عليها -->
+                                    <div class="col">
+                                        <div class="channel-tile text-center p-2 py-3 h-100">
+                                            <div class="channel-tile-icon mx-auto mb-1">3</div>
+                                            <strong class="d-block channel-tile-title">العاملين عليها</strong>
+                                            <span class="channel-tile-sub">القائمون على جمعها</span>
+                                        </div>
+                                    </div>
+                                    <!-- 4. المؤلفة قلوبهم -->
+                                    <div class="col">
+                                        <div class="channel-tile text-center p-2 py-3 h-100">
+                                            <div class="channel-tile-icon mx-auto mb-1">4</div>
+                                            <strong class="d-block channel-tile-title">المؤلفة قلوبهم</strong>
+                                            <span class="channel-tile-sub">لتثبيت القلوب على الخير</span>
+                                        </div>
+                                    </div>
+                                    <!-- 5. في الرقاب -->
+                                    <div class="col">
+                                        <div class="channel-tile text-center p-2 py-3 h-100">
+                                            <div class="channel-tile-icon mx-auto mb-1">5</div>
+                                            <strong class="d-block channel-tile-title">في الرقاب</strong>
+                                            <span class="channel-tile-sub">تحرير الرقاب والأسرى</span>
+                                        </div>
+                                    </div>
+                                    <!-- 6. الغارمين -->
+                                    <div class="col">
+                                        <div class="channel-tile text-center p-2 py-3 h-100">
+                                            <div class="channel-tile-icon mx-auto mb-1">6</div>
+                                            <strong class="d-block channel-tile-title">الغارمين</strong>
+                                            <span class="channel-tile-sub">العاجزون عن سداد الدين</span>
+                                        </div>
+                                    </div>
+                                    <!-- 7. في سبيل الله -->
+                                    <div class="col">
+                                        <div class="channel-tile text-center p-2 py-3 h-100">
+                                            <div class="channel-tile-icon mx-auto mb-1">7</div>
+                                            <strong class="d-block channel-tile-title">في سبيل الله</strong>
+                                            <span class="channel-tile-sub">مشاريع الخير العامة</span>
+                                        </div>
+                                    </div>
+                                    <!-- 8. ابن السبيل -->
+                                    <div class="col">
+                                        <div class="channel-tile text-center p-2 py-3 h-100">
+                                            <div class="channel-tile-icon mx-auto mb-1">8</div>
+                                            <strong class="d-block channel-tile-title">ابن السبيل</strong>
+                                            <span class="channel-tile-sub">المسافر المنقطع عن أهله</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION (خدماتنا) ==================== -->
+    <section id="services" class="services-section py-5">
+        <div class="container">
+            <!-- Section Header with Side Lines -->
+            <div class="section-header text-center mb-4">
+                <div class="title-with-lines d-inline-flex align-items-center justify-content-center gap-3 mb-2">
+                    <span class="header-line"></span>
+                    <h2 class="section-title m-0">خدماتنا</h2>
+                    <span class="header-line"></span>
+                </div>
+                <p class="section-subtitle mb-0">نستقبل تبرعاتكم ونقدم المساعدة للأسر المستحقة من خلال برامج متنوعة</p>
+            </div>
+
+            <!-- 5 Cards Row -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-3">
+                <!-- Card 1: الزكاة -->
+                <div class="col">
+                    <div class="service-card h-100 text-center p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="service-icon-circle mx-auto mb-3">
+                                <!-- Plant / Growth Icon -->
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22V10"/>
+                                    <path d="M12 15C8.5 15 6 12.5 6 9c3.5 0 6 2.5 6 6z"/>
+                                    <path d="M12 13c3.5 0 6-2.5 6-6-3.5 0-6 2.5-6 6z"/>
+                                    <circle cx="15.5" cy="5.5" r="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title mb-2">الزكاة</h3>
+                            <p class="service-card-text mb-3">
+                                توزيع زكاة المال على مستحقيها وفق الضوابط الشرعية.
+                            </p>
+                        </div>
+                        <a href="#contribute" class="service-more-link d-inline-flex align-items-center justify-content-center gap-1 open-service-detail" data-title="الزكاة" data-desc="توزيع زكاة المال على مستحقيها الشرعيين من الفقراء والمساكين والغارمين بقرية كفر طنبدي بعد بحث اجتماعي دقيق.">
+                            <span>المزيد</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: الصدقات -->
+                <div class="col">
+                    <div class="service-card h-100 text-center p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="service-icon-circle mx-auto mb-3">
+                                <!-- Hand Holding Heart Icon -->
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/>
+                                    <path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/>
+                                    <path d="m2 15 6 6"/>
+                                    <path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"/>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title mb-2">الصدقات</h3>
+                            <p class="service-card-text mb-3">
+                                مساعدات متنوعة للأسر الأكثر احتياجاً.
+                            </p>
+                        </div>
+                        <a href="#contribute" class="service-more-link d-inline-flex align-items-center justify-content-center gap-1 open-service-detail" data-title="الصدقات" data-desc="توجيه الصدقات العامة والجارية لكفالة الأسر المتعففة والأيتام وتوفير الاحتياجات الشهرية.">
+                            <span>المزيد</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: القرض الحسن -->
+                <div class="col">
+                    <div class="service-card h-100 text-center p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="service-icon-circle mx-auto mb-3">
+                                <!-- Coins Icon -->
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="8" cy="8" r="6"/>
+                                    <path d="M18.09 10.37A6 6 0 1 1 10.34 18"/>
+                                    <path d="M7 6h1v4"/>
+                                    <path d="m16.71 13.88.7.71-2.82 2.82"/>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title mb-2">القرض الحسن</h3>
+                            <p class="service-card-text mb-3">
+                                دعم المشروعات الصغيرة وتيسير أمور الأسر.
+                            </p>
+                        </div>
+                        <a href="#contribute" class="service-more-link d-inline-flex align-items-center justify-content-center gap-1 open-service-detail" data-title="القرض الحسن" data-desc="تقديم قروض حسنة بدون أي فوائد لدعم المشروعات الصغيرة وتفريج الكربات وتيسير شؤون الأسر.">
+                            <span>المزيد</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: التبرعات العينية -->
+                <div class="col">
+                    <div class="service-card h-100 text-center p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="service-icon-circle mx-auto mb-3">
+                                <!-- Box / Package Icon -->
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+                                    <path d="m3.3 7 8.7 5 8.7-5"/>
+                                    <path d="M12 22V12"/>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title mb-2">التبرعات العينية</h3>
+                            <p class="service-card-text mb-3">
+                                ملابس - مواد غذائية - أجهزة ومستلزمات مختلفة.
+                            </p>
+                        </div>
+                        <a href="#contribute" class="service-more-link d-inline-flex align-items-center justify-content-center gap-1 open-service-detail" data-title="التبرعات العينية" data-desc="استقبال كافة التبرعات العينية من ملابس، شنط مواد غذائية، أجهزة منزلية، وأدوية وتوصيلها للأسر المستحقة.">
+                            <span>المزيد</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: المساعدات العاجلة -->
+                <div class="col">
+                    <div class="service-card h-100 text-center p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="service-icon-circle mx-auto mb-3">
+                                <!-- Medical Kit Icon -->
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                                    <path d="M12 11v6"/>
+                                    <path d="M9 14h6"/>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title mb-2">المساعدات العاجلة</h3>
+                            <p class="service-card-text mb-3">
+                                للحالات المرضية والظروف الطارئة.
+                            </p>
+                        </div>
+                        <a href="#contribute" class="service-more-link d-inline-flex align-items-center justify-content-center gap-1 open-service-detail" data-title="المساعدات العاجلة" data-desc="تدخل سريع لإغاثة الحالات المرضية الحرجة والعمليات الجراحية والظروف الطارئة للأسر.">
+                            <span>المزيد</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DONATION METHODS SECTION (وسائل التبرع) ==================== -->
+    <section id="donation-methods" class="donation-methods-section py-5">
+        <div class="container">
+            <!-- Section Header with Side Lines (Matches خدماتنا & عن الزكاة) -->
+            <div class="section-header text-center mb-4">
+                <div class="title-with-lines d-inline-flex align-items-center justify-content-center gap-3 mb-2">
+                    <span class="header-line"></span>
+                    <h2 class="section-title m-0">وسائل التبرع</h2>
+                    <span class="header-line"></span>
+                </div>
+                <p class="section-subtitle mb-0">نوفر لك قنوات متعددة وآمنة لإيصال زكاتك وصدقاتك إلى مستحقيها بكل سهولة</p>
+            </div>
+
+            <!-- 4 Cards Row with Images & Concise Data -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+                <!-- Method 1: التبرع بمقر اللجنة -->
+                <div class="col">
+                    <div class="service-card zakat-img-card h-100 text-center overflow-hidden p-0 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="zakat-card-thumb position-relative">
+                                <img src="assets/images/about-building.png" alt="التبرع بمقر اللجنة" class="w-100 h-100 object-fit-cover">
+                                <span class="zakat-thumb-badge">إيصال رسمي</span>
+                            </div>
+                            <div class="p-3 pb-2">
+                                <h3 class="service-card-title mb-1">مقر اللجنة الرئيسي</h3>
+                                <p class="service-card-text mb-2">استقبال التبرعات النقدية والعينية بمقر اللجنة يومي الثلاثاء والجمعة.</p>
+                            </div>
+                        </div>
+                        <div class="px-3 pb-3">
+                            <div class="method-data-pill d-flex align-items-center justify-content-center gap-2 py-2 px-3">
+                                <i class="fa-solid fa-location-dot text-emerald"></i>
+                                <span>كفر طنبدي - شبين الكوم</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Method 2: بنك ناصر الاجتماعي -->
+                <div class="col">
+                    <div class="service-card zakat-img-card h-100 text-center overflow-hidden p-0 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="zakat-card-thumb position-relative">
+                                <img src="assets/images/donate-bank.jpg" alt="حساب بنك ناصر الاجتماعي" class="w-100 h-100 object-fit-cover">
+                                <span class="zakat-thumb-badge">حساب معتمد</span>
+                            </div>
+                            <div class="p-3 pb-2">
+                                <h3 class="service-card-title mb-1">بنك ناصر الاجتماعي</h3>
+                                <p class="service-card-text mb-2">الإيداع أو التحويل البنكي المباشر على حساب اللجنة المرخص رسمياً.</p>
+                            </div>
+                        </div>
+                        <div class="px-3 pb-3">
+                            <div class="method-data-pill d-flex align-items-center justify-content-between py-2 px-3">
+                                <span class="small fw-bold text-dark"><i class="fa-solid fa-building-columns text-emerald me-1"></i> ترخيص وحساب: <strong dir="ltr">4859/3</strong></span>
+                                <button type="button" class="btn-copy-data" data-copy="4859/3" title="نسخ الرقم">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Method 3: المحافظ الإلكترونية وإنستا باي -->
+                <div class="col">
+                    <div class="service-card zakat-img-card h-100 text-center overflow-hidden p-0 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="zakat-card-thumb position-relative">
+                                <img src="assets/images/donate-wallet.jpg" alt="المحافظ الإلكترونية وإنستا باي" class="w-100 h-100 object-fit-cover">
+                                <span class="zakat-thumb-badge">تحويل فوري</span>
+                            </div>
+                            <div class="p-3 pb-2">
+                                <h3 class="service-card-title mb-1">المحافظ الذكية وإنستا باي</h3>
+                                <p class="service-card-text mb-2">تحويل فوري عبر فودافون كاش أو تطبيق InstaPay على رقم اللجنة.</p>
+                            </div>
+                        </div>
+                        <div class="px-3 pb-3">
+                            <div class="method-data-pill d-flex align-items-center justify-content-between py-2 px-3">
+                                <span class="small fw-bold text-dark"><i class="fa-solid fa-mobile-screen-button text-emerald me-1"></i> الرقم: <strong dir="ltr">01000000004</strong></span>
+                                <button type="button" class="btn-copy-data" data-copy="01000000004" title="نسخ الرقم">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Method 4: مندوب التحصيل المنزلي -->
+                <div class="col">
+                    <div class="service-card zakat-img-card h-100 text-center overflow-hidden p-0 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="zakat-card-thumb position-relative">
+                                <img src="assets/images/zakat-box.png" alt="مندوب التحصيل المنزلي" class="w-100 h-100 object-fit-cover">
+                                <span class="zakat-thumb-badge">لباب المنزل</span>
+                            </div>
+                            <div class="p-3 pb-2">
+                                <h3 class="service-card-title mb-1">مندوب التحصيل المنزلي</h3>
+                                <p class="service-card-text mb-2">يصلك مندوب اللجنة لباب المنزل لتحصيل التبرعات بإيصال رسمي مختوم.</p>
+                            </div>
+                        </div>
+                        <div class="px-3 pb-3">
+                            <button type="button" class="btn btn-emerald w-100 py-1 rounded-3 small fw-bold open-donate-modal" data-type="طلب مندوب تحصيل">
+                                <i class="fa-solid fa-user-check me-1"></i>
+                                <span>اطلب مندوب التحصيل</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== IMPACT IN NUMBERS (أثر عطائك بالأرقام) ==================== -->
+    <section id="stats" class="stats-section position-relative overflow-hidden py-4">
+        <!-- Left Mosque Photo with Gradient Fade -->
+        <div class="stats-bg-photo" style="background-image: url('assets/images/stats-mosque.png');"></div>
+        <div class="stats-gradient-overlay"></div>
+
+        <div class="container position-relative z-2 py-2">
+            <!-- Header aligned right -->
+            <div class="row">
+                <div class="col-12 text-right mb-4">
+                    <h2 class="section-title mb-1">أثر عطائك بالأرقام</h2>
+                    <p class="section-subtitle mb-0">بفضل الله ثم بدعمكم، نصل إلى المزيد من الأسر كل عام.</p>
+                </div>
+            </div>
+
+            <!-- Stats Row (Occupies right ~72% on desktop so left mosque photo is visible) -->
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row row-cols-2 row-cols-md-4 g-3 stats-counters-row">
+                        <!-- Stat 1: 520 -->
+                        <div class="col stat-item text-center">
+                            <div class="stat-icon mb-2">
+                                <!-- Family Icon -->
+                                <svg width="38" height="38" viewBox="0 0 24 24" fill="currentColor">
+                                    <circle cx="7" cy="5.5" r="2.2"/>
+                                    <circle cx="17" cy="5.5" r="2.2"/>
+                                    <circle cx="12" cy="8.5" r="1.8"/>
+                                    <path d="M4 19v-5.5c0-1.4 1.1-2.5 2.5-2.5h1c1.4 0 2.5 1.1 2.5 2.5V19H4z"/>
+                                    <path d="M14 19v-5.5c0-1.4 1.1-2.5 2.5-2.5h1c1.4 0 2.5 1.1 2.5 2.5V19h-6z"/>
+                                    <path d="M9.5 19v-4c0-1.1.9-2 2-2h1c1.1 0 2 .9 2 2v4h-5z"/>
+                                </svg>
+                            </div>
+                            <div class="stat-number counter-val" data-target="520">520</div>
+                            <div class="stat-label">أسرة مستفيدة<br>هذا العام</div>
+                        </div>
+
+                        <!-- Stat 2: 12,350 -->
+                        <div class="col stat-item text-center">
+                            <div class="stat-icon mb-2">
+                                <!-- Box / Carton Icon -->
+                                <svg width="38" height="38" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L3 6.5v11L12 22l9-4.5v-11L12 2zm0 2.3l6.2 3.1-2.4 1.2-6.2-3.1L12 4.3zm-7 4.8l6 3v7.3l-6-3V9.1zm8 10.3v-7.3l6-3v7.3l-6 3z"/>
+                                </svg>
+                            </div>
+                            <div class="stat-number counter-val" data-target="12350" data-comma="true">12,350</div>
+                            <div class="stat-label">كرتونة غذائية<br>تم توزيعها</div>
+                        </div>
+
+                        <!-- Stat 3: 3,200 -->
+                        <div class="col stat-item text-center">
+                            <div class="stat-icon mb-2">
+                                <!-- Meat Icon -->
+                                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M15.5 4.5c3 0 5.5 2.2 5.5 5 0 3.8-4 7.5-9.5 9.5-3.8 1.4-7.5 0-8.5-3-1-2.8 1.5-6 4.5-7.5 3-1.5 5-4 8-4z"/>
+                                    <circle cx="15" cy="9.5" r="2"/>
+                                    <path d="M3.2 15.5c.8 2.8 4.2 4.2 8.3 2.7 5.2-1.9 9-5.3 9.5-8.7"/>
+                                </svg>
+                            </div>
+                            <div class="stat-number counter-val" data-target="3200" data-comma="true">3,200</div>
+                            <div class="stat-label">كجم لحوم<br>تم توزيعها</div>
+                        </div>
+
+                        <!-- Stat 4: 85 -->
+                        <div class="col stat-item text-center">
+                            <div class="stat-icon mb-2">
+                                <!-- Hand Holding Heart / Star Icon -->
+                                <svg width="38" height="38" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 3.5c1.1-1.3 3-1.3 4.1 0 1.1 1.2 1.1 3.1 0 4.3L12 12 7.9 7.8c-1.1-1.2-1.1-3.1 0-4.3 1.1-1.3 3-1.3 4.1 0z"/>
+                                    <path d="M3 15.5h5.5l3.5 1.5h4.5c.8 0 1.5-.7 1.5-1.5s-.7-1.5-1.5-1.5h-3.8l-1.7-.7V11.5l5.8 1.2c1.5.3 2.7 1.6 2.7 3.2 0 1.8-1.5 3.1-3.3 3.1H11l-5-1.5H3v-2z"/>
+                                </svg>
+                            </div>
+                            <div class="stat-number counter-val" data-target="85">85</div>
+                            <div class="stat-label">مشروع قرض حسن<br>منفذ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT & WAYS TO CONTRIBUTE ==================== -->
+    <section id="about" class="about-contribute-section py-4">
+        <div class="container">
+            <div class="row g-3 align-items-stretch">
+                <!-- Right Column (in RTL): Committee Building Photo -->
+                <div class="col-lg-4">
+                    <div class="building-photo-card h-100">
+                        <img src="assets/images/about-building.png" alt="مقر لجنة زكاة كفر طنبدي" class="w-100 h-100 object-fit-cover rounded-4">
+                    </div>
+                </div>
+
+                <!-- Middle Column: نبذة عن اللجنة -->
+                <div class="col-lg-4">
+                    <div class="content-box-card h-100 p-4 d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="box-title mb-2">نبذة عن اللجنة</h3>
+                            <p class="about-description mb-3">
+                                لجنة زكاة كفر طنبدي هي لجنة خيرية مرخصة من بنك ناصر الاجتماعي برقم (4859/3).
+                                وتعمل تحت إشراف الأستاذ علي دواد المحامي وبمشاركة نخبة من أهل القرية.
+                            </p>
+                            <ul class="about-info-list list-unstyled mb-4 p-0">
+                                <li class="d-flex align-items-center gap-2 mb-2">
+                                    <i class="fa-regular fa-id-card text-emerald"></i>
+                                    <span><strong>رقم التسجيل:</strong> 4859/3</span>
+                                </li>
+                                <li class="d-flex align-items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-location-dot text-emerald"></i>
+                                    <span><strong>مقر اللجنة:</strong> كفر طنبدي - مركز شبين الكوم</span>
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <i class="fa-regular fa-clock text-emerald"></i>
+                                    <span><strong>مواعيد العمل:</strong> الثلاثاء والجمعة</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-emerald w-100 py-2 d-flex align-items-center justify-content-center gap-2 open-about-modal">
+                                <i class="fa-regular fa-user"></i>
+                                <span>تعرف على اللجنة أكثر</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left Column (in RTL): طرق المساهمة -->
+                <div class="col-lg-4" id="contribute">
+                    <div class="content-box-card h-100 p-4 d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="box-title mb-1">طرق المساهمة</h3>
+                            <p class="box-subtitle mb-3">اختر ما يناسبك من أبواب الخير</p>
+
+                            <!-- 2x2 Selectable Grid -->
+                            <div class="row g-2 mb-3">
+                                <!-- الصدقات -->
+                                <div class="col-6">
+                                    <div class="contribute-option-tile active text-center p-3" data-contribute="الصدقات">
+                                        <div class="tile-icon mb-1">
+                                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"/>
+                                                <path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/>
+                                                <path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/>
+                                            </svg>
+                                        </div>
+                                        <span class="tile-label d-block">الصدقات</span>
+                                    </div>
+                                </div>
+
+                                <!-- زكاة المال -->
+                                <div class="col-6">
+                                    <div class="contribute-option-tile text-center p-3" data-contribute="زكاة المال">
+                                        <div class="tile-icon mb-1">
+                                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M12 22V10"/>
+                                                <path d="M12 15C8.5 15 6 12.5 6 9c3.5 0 6 2.5 6 6z"/>
+                                                <path d="M12 13c3.5 0 6-2.5 6-6-3.5 0-6 2.5-6 6z"/>
+                                                <circle cx="15.5" cy="5.5" r="2"/>
+                                            </svg>
+                                        </div>
+                                        <span class="tile-label d-block">زكاة المال</span>
+                                    </div>
+                                </div>
+
+                                <!-- تبرعات عينية -->
+                                <div class="col-6">
+                                    <div class="contribute-option-tile text-center p-3" data-contribute="تبرعات عينية">
+                                        <div class="tile-icon mb-1">
+                                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+                                                <path d="m3.3 7 8.7 5 8.7-5"/>
+                                                <path d="M12 22V12"/>
+                                            </svg>
+                                        </div>
+                                        <span class="tile-label d-block">تبرعات عينية</span>
+                                    </div>
+                                </div>
+
+                                <!-- القرض الحسن -->
+                                <div class="col-6">
+                                    <div class="contribute-option-tile text-center p-3" data-contribute="القرض الحسن">
+                                        <div class="tile-icon mb-1">
+                                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="8" cy="8" r="6"/>
+                                                <path d="M18.09 10.37A6 6 0 1 1 10.34 18"/>
+                                                <path d="M7 6h1v4"/>
+                                            </svg>
+                                        </div>
+                                        <span class="tile-label d-block">القرض الحسن</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="button" id="startContributeBtn" class="btn btn-emerald w-100 py-2 d-flex align-items-center justify-content-center gap-2 open-donate-modal" data-type="الصدقات">
+                                <i class="fa-solid fa-heart"></i>
+                                <span>ابدأ بالمساهمة الآن</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ELECTRONIC HELP REQUEST & RECENT WORKS ==================== -->
+    <section id="works" class="works-help-section py-3">
+        <div class="container">
+            <div class="row g-3 align-items-stretch">
+                <!-- Right Card (in RTL): طلب مساعدة إلكتروني -->
+                <div class="col-lg-4">
+                    <div class="content-box-card help-request-card h-100 p-4 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-start gap-3 mb-3">
+                                <div class="help-icon-badge flex-shrink-0">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                        <polyline points="14 2 14 8 20 8"/>
+                                        <line x1="16" y1="13" x2="8" y2="13"/>
+                                        <line x1="16" y1="17" x2="8" y2="17"/>
+                                        <line x1="10" y1="9" x2="8" y2="9"/>
+                                    </svg>
+                                </div>
+                                <h3 class="box-title m-0">طلب مساعدة إلكتروني</h3>
+                            </div>
+                            <p class="help-card-desc mb-3">
+                                يمكنك تقديم طلب مساعدة من خلال النموذج الخاص بنا مع إرفاق المستندات المطلوبة.
+                            </p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-emerald rounded-pill w-100 py-2 d-flex align-items-center justify-content-center gap-2 open-help-modal">
+                                <i class="fa-regular fa-paper-plane"></i>
+                                <span>تقديم طلب مساعدة</span>
+                                <i class="fa-solid fa-arrow-left ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left Card (in RTL): من أعمالنا الأخيرة -->
+                <div class="col-lg-8">
+                    <div class="recent-works-box h-100 p-3 px-4 d-flex flex-column justify-content-center">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h3 class="box-title m-0">من أعمالنا الأخيرة</h3>
+                        </div>
+
+                        <div class="works-slider-wrapper position-relative d-flex align-items-center">
+                            <!-- Cards Track -->
+                            <div class="row g-3 flex-grow-1" id="worksSliderContainer">
+                                <!-- Work 1 (Rightmost in RTL) -->
+                                <div class="col-md-4 work-slide-col">
+                                    <div class="work-item-card h-100">
+                                        <div class="work-img-wrap">
+                                            <img src="assets/images/work-1.png" alt="دعم 3 أسر بمستلزمات منزلية" class="w-100">
+                                        </div>
+                                        <div class="work-card-body p-2 px-3">
+                                            <h4 class="work-title mb-1">دعم 3 أسر بمستلزمات منزلية</h4>
+                                            <span class="work-date d-block">2026-09-10</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Work 2 (Middle) -->
+                                <div class="col-md-4 work-slide-col">
+                                    <div class="work-item-card h-100">
+                                        <div class="work-img-wrap">
+                                            <img src="assets/images/work-2.png" alt="توزيع 185 كجم لحوم" class="w-100">
+                                        </div>
+                                        <div class="work-card-body p-2 px-3">
+                                            <h4 class="work-title mb-1">توزيع 185 كجم لحوم</h4>
+                                            <span class="work-date d-block">2026-09-15</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Work 3 (Leftmost in RTL) -->
+                                <div class="col-md-4 work-slide-col">
+                                    <div class="work-item-card h-100">
+                                        <div class="work-img-wrap">
+                                            <img src="assets/images/work-3.png" alt="توزيع 85 شنطة مواد غذائية" class="w-100">
+                                        </div>
+                                        <div class="work-card-body p-2 px-3">
+                                            <h4 class="work-title mb-1">توزيع 85 شنطة مواد غذائية</h4>
+                                            <span class="work-date d-block">2026-09-20</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slider Navigation Arrows on the Left (matching image) -->
+                            <div class="works-nav-arrows d-flex flex-column gap-2 ms-2">
+                                <button type="button" class="work-arrow-btn" id="workPrevBtn" aria-label="السابق">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button type="button" class="work-arrow-btn" id="workNextBtn" aria-label="التالي">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT US SECTION (تواصل معنا) ==================== -->
+    <section id="contact" class="contact-section py-3 mb-3">
+        <div class="container">
+            <div class="contact-strip-box p-3 px-4">
+                <div class="row align-items-center g-3">
+                    <!-- Right Title & Subtitle -->
+                    <div class="col-lg-3 text-right">
+                        <h3 class="box-title mb-1">تواصل معنا</h3>
+                        <p class="contact-desc mb-0">
+                            نستقبل استفساراتكم وطلباتكم<br>
+                            عبر واتساب أو الهاتف مباشرة.
+                        </p>
+                    </div>
+
+                    <!-- 4 WhatsApp Contact Pills -->
+                    <div class="col-lg-9">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-2">
+                            <!-- Card 1: الاستفسار العام (Green) -->
+                            <div class="col">
+                                <a href="https://wa.me/201000000001" target="_blank" class="whatsapp-pill-card wa-green d-flex align-items-center justify-content-between p-2 px-3 text-decoration-none">
+                                    <div class="wa-icon-circle">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div class="wa-text text-center flex-grow-1">
+                                        <span class="wa-title d-block">الاستفسار العام</span>
+                                        <span class="wa-sub d-block">واتساب</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Card 2: طلبات المساعدة (Purple) -->
+                            <div class="col">
+                                <a href="https://wa.me/201000000002" target="_blank" class="whatsapp-pill-card wa-purple d-flex align-items-center justify-content-between p-2 px-3 text-decoration-none">
+                                    <div class="wa-icon-circle">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div class="wa-text text-center flex-grow-1">
+                                        <span class="wa-title d-block">طلبات المساعدة</span>
+                                        <span class="wa-sub d-block">واتساب</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Card 3: القرض الحسن (Blue) -->
+                            <div class="col">
+                                <a href="https://wa.me/201000000003" target="_blank" class="whatsapp-pill-card wa-blue d-flex align-items-center justify-content-between p-2 px-3 text-decoration-none">
+                                    <div class="wa-icon-circle">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div class="wa-text text-center flex-grow-1">
+                                        <span class="wa-title d-block">القرض الحسن</span>
+                                        <span class="wa-sub d-block">واتساب</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Card 4: التبرعات (Orange) -->
+                            <div class="col">
+                                <a href="https://wa.me/201000000004" target="_blank" class="whatsapp-pill-card wa-orange d-flex align-items-center justify-content-between p-2 px-3 text-decoration-none">
+                                    <div class="wa-icon-circle">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div class="wa-text text-center flex-grow-1">
+                                        <span class="wa-title d-block">التبرعات</span>
+                                        <span class="wa-sub d-block">واتساب</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer py-4">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <!-- Right (in RTL): Quranic Verse -->
+                <div class="col-md-4 text-center text-md-start">
+                    <p class="quran-verse mb-1">﴿ إِنَّمَا نُطْعِمُكُمْ لِوَجْهِ اللَّهِ لَا نُرِيدُ مِنكُمْ جَزَاءً وَلَا شُكُورًا ﴾</p>
+                    <span class="quran-surah">(الإنسان: 9)</span>
+                </div>
+
+                <!-- Center: Committee Name & Copyright -->
+                <div class="col-md-4 text-center">
+                    <h4 class="footer-brand-title mb-1">لجنة زكاة كفر طنبدي</h4>
+                    <p class="footer-copyright mb-0">جميع الحقوق محفوظة &copy; 2026</p>
+                </div>
+
+                <!-- Left (in RTL): Social Icons & Slogan -->
+                <div class="col-md-4 text-center text-md-end">
+                    <div class="footer-socials d-inline-flex align-items-center gap-3 mb-1">
+                        <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" aria-label="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                    <p class="footer-slogan mb-0">معاً .. نبني مجتمعاً أكثر خيراً</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== INTERACTIVE MODALS (Bootstrap 5 + jQuery) ==================== -->
+
+    <!-- 1. Donate Modal -->
+    <div class="modal fade" id="donateModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title fw-bold text-emerald">
+                        <i class="fa-solid fa-heart me-1"></i>
+                        المساهمة والتبرع - <span id="donateModalType">الصدقات</span>
+                    </h5>
+                    <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body pt-3">
+                    <form id="donateForm">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">باب المساهمة</label>
+                            <select class="form-select" id="donateCategorySelect">
+                                <option value="الصدقات">الصدقات</option>
+                                <option value="زكاة المال">زكاة المال</option>
+                                <option value="تبرعات عينية">تبرعات عينية</option>
+                                <option value="القرض الحسن">القرض الحسن</option>
+                                <option value="المساعدات العاجلة">المساعدات العاجلة</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">قيمة المساهمة (ج.م)</label>
+                            <input type="number" class="form-control" placeholder="أدخل المبلغ بالجنيه المصري" required min="10">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">الاسم (اختياري - فاعل خير)</label>
+                            <input type="text" class="form-control" placeholder="فاعل خير">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">رقم الهاتف للتواصل أو إرسال إيصال</label>
+                            <input type="tel" class="form-control" placeholder="01xxxxxxxxx" required>
+                        </div>
+                        <button type="submit" class="btn btn-emerald w-100 py-2 rounded-pill fw-bold">تأكيد المساهمة</button>
+                    </form>
+                    <div id="donateSuccessMsg" class="alert alert-success mt-3 mb-0 text-center d-none">
+                        جزاكم الله خيراً! تم تسجيل طلب مساهمتكم وسيتواصل معكم مندوب اللجنة.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Electronic Help Request Modal -->
+    <div class="modal fade" id="helpRequestModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title fw-bold text-emerald">
+                        <i class="fa-regular fa-file-lines me-1"></i>
+                        نموذج طلب مساعدة إلكتروني
+                    </h5>
+                    <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body pt-3">
+                    <form id="helpRequestForm">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">الاسم رباعي</label>
+                            <input type="text" class="form-control" required placeholder="أدخل الاسم بالكامل">
+                        </div>
+                        <div class="row g-2 mb-3">
+                            <div class="col-6">
+                                <label class="form-label small fw-bold">الرقم القومي</label>
+                                <input type="text" class="form-control" maxlength="14" required placeholder="14 رقم">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small fw-bold">رقم الهاتف / واتساب</label>
+                                <input type="tel" class="form-control" required placeholder="01xxxxxxxxx">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">نوع المساعدة المطلوبة</label>
+                            <select class="form-select" required>
+                                <option value="">اختر نوع المساعدة...</option>
+                                <option value="مساعدة مالية">مساعدة مالية / شهرية</option>
+                                <option value="مساعدة علاجية">مساعدة طبية وعلاجية عاجلة</option>
+                                <option value="قرض حسن">طلب قرض حسن</option>
+                                <option value="مساعدة عينية">مستلزمات منزلية أو غذائية</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">إرفاق المستندات المطلوبة (صورة البطاقة / التقارير)</label>
+                            <input type="file" class="form-control" multiple>
+                        </div>
+                        <button type="submit" class="btn btn-emerald w-100 py-2 rounded-pill fw-bold">إرسال الطلب</button>
+                    </form>
+                    <div id="helpSuccessMsg" class="alert alert-success mt-3 mb-0 text-center d-none">
+                        تم استلام طلب المساعدة بنجاح. سيتم دراسته من قِبل لجنة البحث الاجتماعي والتواصل معكم.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Service / About Details Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title fw-bold text-emerald" id="infoModalTitle">لجنة زكاة كفر طنبدي</h5>
+                    <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body pt-3">
+                    <p id="infoModalDesc" class="text-secondary lh-lg mb-3"></p>
+                    <div class="d-flex justify-content-end gap-2">
+                        <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">إغلاق</button>
+                        <button type="button" class="btn btn-emerald rounded-pill px-4 open-donate-from-info">ساهم في هذا الباب</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery 3.7.1 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5.3 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js?v=4"></script>
+</body>
+</html>
+

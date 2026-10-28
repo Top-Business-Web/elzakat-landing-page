@@ -1,0 +1,911 @@
+/* ==========================================================================
+   لجنة زكاة كفر طنبدي - Custom Stylesheet (CSS3 + Bootstrap 5 RTL)
+   ========================================================================== */
+
+:root {
+    --emerald-dark: #103d2e;
+    --emerald-primary: #17543e;
+    --emerald-hover: #11402f;
+    --emerald-light: #e9f2ee;
+    --cream-bg: #faf8f2;
+    --cream-card: #fcfbf7;
+    --sage-tint: #eef2ec;
+    --border-soft: #e4e1d6;
+    --gold-accent: #a67c46;
+    --text-dark: #18352a;
+    --text-body: #4b5551;
+    --text-muted: #76807b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--cream-bg);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.text-emerald {
+    color: var(--emerald-primary) !important;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn-emerald {
+    background-color: var(--emerald-primary);
+    color: #ffffff;
+    border: 1px solid var(--emerald-primary);
+    font-weight: 700;
+    font-size: 0.92rem;
+    transition: all 0.25s ease;
+}
+
+.btn-emerald:hover,
+.btn-emerald:focus {
+    background-color: var(--emerald-hover);
+    border-color: var(--emerald-hover);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(23, 84, 62, 0.22);
+}
+
+.btn-outline-emerald {
+    background-color: rgba(255, 255, 255, 0.65);
+    color: var(--emerald-primary);
+    border: 1.5px solid #6b8e7e;
+    font-weight: 700;
+    font-size: 0.92rem;
+    transition: all 0.25s ease;
+}
+
+.btn-outline-emerald:hover,
+.btn-outline-emerald:focus {
+    background-color: var(--emerald-primary);
+    border-color: var(--emerald-primary);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   HEADER / NAVBAR
+   ========================================================================== */
+.site-header {
+    background-color: #fbf9f4;
+    border-bottom: 1px solid #ece8dc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    z-index: 1030;
+}
+
+.brand-emblem {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-text {
+    line-height: 1.15;
+}
+
+.brand-sub {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--emerald-primary);
+}
+
+.brand-main {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--emerald-dark);
+}
+
+.brand-tagline {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-body);
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 0.5rem 0.85rem !important;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--emerald-primary);
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    right: 0.85rem;
+    left: 0.85rem;
+    height: 2.5px;
+    background-color: var(--emerald-primary);
+    border-radius: 2px;
+}
+
+.btn-search-toggle {
+    background: transparent;
+    border: none;
+    color: var(--emerald-primary);
+    font-size: 1.1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.btn-search-toggle:hover {
+    background-color: var(--emerald-light);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+    background-color: #f4efe4;
+    min-height: 360px;
+    border-bottom: 1px solid #e8e2d3;
+}
+
+.min-vh-hero {
+    min-height: 360px;
+}
+
+/* Left Side Background Photo */
+.hero-bg-photo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+/* Smooth fade from right cream into left photo */
+.hero-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to left,
+        #f5f1e6 0%,
+        #f5f1e6 34%,
+        rgba(245, 241, 230, 0.92) 45%,
+        rgba(245, 241, 230, 0.55) 58%,
+        rgba(245, 241, 230, 0.0) 75%
+    );
+    z-index: 1;
+}
+
+/* Subtle Islamic Geometric Ornament on Far Right */
+.hero-islamic-pattern {
+    position: absolute;
+    top: -30px;
+    right: -60px;
+    width: 300px;
+    height: 300px;
+    opacity: 0.06;
+    z-index: 1;
+    pointer-events: none;
+    background-image: radial-gradient(circle, var(--emerald-primary) 2px, transparent 2px),
+                      radial-gradient(circle, var(--emerald-primary) 1px, transparent 1px);
+    background-size: 28px 28px;
+    border-radius: 50%;
+    border: 12px double var(--emerald-primary);
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--emerald-dark);
+    line-height: 1.3;
+}
+
+.hero-subtitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--emerald-primary);
+}
+
+.hero-desc {
+    font-size: 1.02rem;
+    font-weight: 500;
+    color: #3d4843;
+    line-height: 1.75;
+}
+
+.hero-btn-primary,
+.hero-btn-outline {
+    padding: 0.62rem 1.65rem;
+    border-radius: 10px;
+    font-size: 0.96rem;
+}
+
+/* ==========================================================================
+   ZAKAT GUIDE SECTION (عن الزكاة - Tabs)
+   ========================================================================== */
+.zakat-guide-section {
+    background-color: #f4f2ea;
+    border-bottom: 1px solid #e7e2d5;
+}
+
+.zakat-tabs-nav {
+    background-color: #fcfbf7;
+    border: 1px solid var(--border-soft);
+}
+
+.zakat-tab-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--text-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.35rem;
+    border-radius: 50px;
+    transition: all 0.22s ease;
+}
+
+.zakat-tab-btn:hover {
+    color: var(--emerald-primary);
+}
+
+.zakat-tab-btn.active {
+    background-color: var(--emerald-primary);
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(23, 84, 62, 0.2);
+}
+
+.zakat-photo-card {
+    min-height: 265px;
+    max-height: 295px;
+}
+
+.photo-ayah-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(16, 61, 46, 0.92), rgba(16, 61, 46, 0.65), transparent);
+    color: #ffffff;
+    font-family: 'Amiri', serif;
+    font-size: 1.02rem;
+    padding-top: 2rem !important;
+}
+
+.zakat-rate-select {
+    background-color: #f6f5ef;
+    border: 1px solid #dfdace;
+    color: var(--emerald-dark);
+    font-weight: 700;
+    font-size: 0.78rem;
+    border-radius: 8px;
+}
+
+.zakat-input-field {
+    background-color: #f7f5ee;
+    border: 1.5px solid #e2ded2;
+    border-radius: 10px;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.9rem;
+}
+
+.zakat-input-field:focus {
+    background-color: #ffffff;
+    border-color: var(--emerald-primary);
+    box-shadow: 0 0 0 3px rgba(23, 84, 62, 0.1);
+}
+
+.calc-result-strip {
+    background-color: #f6f5ef;
+    border: 1.5px solid #e5e2d7;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.calc-result-strip.calculated-active {
+    background-color: #eaf3ee;
+    border-color: var(--emerald-primary);
+}
+
+.calc-output-val {
+    font-size: 1.15rem;
+    color: var(--emerald-primary);
+    font-weight: 800;
+}
+
+/* Tab 2: 5 Image Cards matching خدماتنا */
+.zakat-card-thumb {
+    height: 118px;
+    overflow: hidden;
+    background-color: #eae7df;
+}
+
+.zakat-card-thumb img {
+    transition: transform 0.35s ease;
+}
+
+.zakat-img-card:hover .zakat-card-thumb img {
+    transform: scale(1.06);
+}
+
+.zakat-thumb-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(23, 84, 62, 0.92);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.65rem;
+    border-radius: 50px;
+}
+
+/* Tab 3: 8 Compact Channel Tiles matching طرق المساهمة */
+.bg-emerald-soft {
+    background-color: var(--emerald-light);
+}
+
+.channel-tile {
+    background-color: #f6f5ef;
+    border: 1.5px solid #e5e2d7;
+    border-radius: 12px;
+    transition: all 0.22s ease;
+}
+
+.channel-tile:hover {
+    background-color: #ebf3ee;
+    border-color: var(--emerald-primary);
+    transform: translateY(-2px);
+}
+
+.channel-tile-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--emerald-primary);
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.channel-tile-title {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--emerald-dark);
+}
+
+.channel-tile-sub {
+    font-size: 0.75rem;
+    color: var(--text-body);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   SERVICES SECTION (خدماتنا)
+   ========================================================================== */
+.services-section {
+    background-color: var(--cream-bg);
+}
+
+.section-title {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: var(--emerald-dark);
+}
+
+.section-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-body);
+    font-weight: 500;
+}
+
+.header-line {
+    display: inline-block;
+    width: 90px;
+    height: 1.5px;
+    background-color: #dcd6c8;
+}
+
+.service-card {
+    background-color: var(--cream-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    transition: all 0.28s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.015);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: #b7cbbd;
+    box-shadow: 0 8px 20px rgba(23, 84, 62, 0.08);
+}
+
+.service-icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--emerald-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(23, 84, 62, 0.18);
+}
+
+.service-card-title {
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: var(--emerald-dark);
+}
+
+.service-card-text {
+    font-size: 0.84rem;
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+.service-more-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--emerald-primary);
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.service-more-link:hover {
+    color: var(--emerald-dark);
+    gap: 6px !important;
+}
+
+/* ==========================================================================
+   DONATION METHODS SECTION (وسائل التبرع)
+   ========================================================================== */
+.donation-methods-section {
+    background-color: #f4f2ea;
+    border-top: 1px solid #e7e2d5;
+}
+
+.method-data-pill {
+    background-color: #f6f5ef;
+    border: 1px solid #e3dfd2;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--emerald-dark);
+}
+
+.btn-copy-data {
+    background-color: #ffffff;
+    border: 1px solid #d5d0c3;
+    color: var(--emerald-primary);
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    transition: all 0.2s ease;
+}
+
+.btn-copy-data:hover,
+.btn-copy-data.copied {
+    background-color: var(--emerald-primary);
+    border-color: var(--emerald-primary);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   IMPACT IN NUMBERS (أثر عطائك بالأرقام)
+   ========================================================================== */
+.stats-section {
+    background-color: #eef1eb;
+    border-top: 1px solid #e2e5de;
+    border-bottom: 1px solid #e2e5de;
+    min-height: 240px;
+}
+
+.stats-bg-photo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 38%;
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.stats-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to left,
+        #eef1eb 0%,
+        #eef1eb 62%,
+        rgba(238, 241, 235, 0.92) 70%,
+        rgba(238, 241, 235, 0.25) 84%,
+        rgba(238, 241, 235, 0.0) 98%
+    );
+    z-index: 1;
+}
+
+.stat-item {
+    position: relative;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Vertical dividers between stats */
+@media (min-width: 768px) {
+    .stat-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 18%;
+        bottom: 18%;
+        left: 0;
+        width: 1px;
+        background-color: #d5dbd2;
+    }
+}
+
+.stat-icon {
+    color: var(--gold-accent);
+}
+
+.stat-number {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--emerald-dark);
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+    direction: ltr;
+    display: inline-block;
+}
+
+.stat-label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-body);
+    line-height: 1.45;
+}
+
+/* ==========================================================================
+   ABOUT & WAYS TO CONTRIBUTE SECTION
+   ========================================================================== */
+.building-photo-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    min-height: 290px;
+}
+
+.content-box-card {
+    background-color: var(--cream-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.015);
+}
+
+.box-title {
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: var(--emerald-dark);
+}
+
+.box-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.about-description {
+    font-size: 0.88rem;
+    color: var(--text-body);
+    line-height: 1.75;
+}
+
+.about-info-list li {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+}
+
+.about-info-list i {
+    width: 18px;
+    text-align: center;
+}
+
+/* 2x2 Contribute Option Tiles */
+.contribute-option-tile {
+    background-color: #f6f5ef;
+    border: 1.5px solid #e5e2d7;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    user-select: none;
+}
+
+.contribute-option-tile .tile-icon {
+    color: var(--emerald-primary);
+}
+
+.contribute-option-tile .tile-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--emerald-dark);
+}
+
+.contribute-option-tile:hover,
+.contribute-option-tile.active {
+    background-color: #ebf3ee;
+    border-color: var(--emerald-primary);
+    box-shadow: 0 3px 8px rgba(23, 84, 62, 0.08);
+}
+
+/* ==========================================================================
+   ELECTRONIC HELP REQUEST & RECENT WORKS
+   ========================================================================== */
+.help-icon-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: var(--emerald-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.help-card-desc {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.7;
+}
+
+.recent-works-box {
+    background-color: #eff2ec;
+    border: 1px solid #dfe4da;
+    border-radius: 16px;
+}
+
+.work-item-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e4e7e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.25s ease;
+}
+
+.work-item-card:hover {
+    transform: translateY(-3px);
+}
+
+.work-img-wrap {
+    height: 92px;
+    overflow: hidden;
+    background-color: #eae7df;
+}
+
+.work-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-title {
+    font-size: 0.84rem;
+    font-weight: 800;
+    color: var(--emerald-dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.work-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.work-arrow-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #d5dbd2;
+    background-color: #ffffff;
+    color: var(--emerald-primary);
+    font-size: 0.72rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.work-arrow-btn:hover {
+    background-color: var(--emerald-primary);
+    color: #ffffff;
+    border-color: var(--emerald-primary);
+}
+
+/* ==========================================================================
+   CONTACT US SECTION (تواصل معنا)
+   ========================================================================== */
+.contact-strip-box {
+    background-color: #f4f2ea;
+    border: 1px solid #e6e2d6;
+    border-radius: 16px;
+}
+
+.contact-desc {
+    font-size: 0.83rem;
+    color: var(--text-body);
+    line-height: 1.55;
+}
+
+.whatsapp-pill-card {
+    background-color: #ffffff;
+    border: 1px solid #e4e1d8;
+    border-radius: 14px;
+    transition: all 0.22s ease;
+}
+
+.whatsapp-pill-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.05);
+}
+
+.wa-icon-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.wa-title {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.wa-sub {
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+/* Color Variants for the 4 WhatsApp Pills */
+.wa-green .wa-icon-circle {
+    background-color: #469c57;
+}
+.wa-green .wa-sub {
+    color: #469c57;
+}
+
+.wa-purple .wa-icon-circle {
+    background-color: #7b4fa0;
+}
+.wa-purple .wa-sub {
+    color: #7b4fa0;
+}
+
+.wa-blue .wa-icon-circle {
+    background-color: #3c6ca8;
+}
+.wa-blue .wa-sub {
+    color: #3c6ca8;
+}
+
+.wa-orange .wa-icon-circle {
+    background-color: #d68b45;
+}
+.wa-orange .wa-sub {
+    color: #d68b45;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+    background-color: var(--emerald-dark);
+    color: #ffffff;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.quran-verse {
+    font-family: 'Amiri', serif;
+    font-size: 1.05rem;
+    color: #e6efe9;
+}
+
+.quran-surah {
+    font-size: 0.78rem;
+    color: #a7c0b4;
+}
+
+.footer-brand-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    color: #b5cbc0;
+}
+
+.footer-socials a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: all 0.2s ease;
+}
+
+.footer-socials a:hover {
+    background-color: #ffffff;
+    color: var(--emerald-dark);
+}
+
+.footer-slogan {
+    font-size: 0.82rem;
+    color: #cde0d6;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 991.98px) {
+    .hero-bg-photo {
+        width: 100%;
+        opacity: 0.25;
+    }
+    .hero-gradient-overlay {
+        background: rgba(245, 241, 230, 0.88);
+    }
+    .stats-bg-photo {
+        width: 100%;
+        opacity: 0.15;
+    }
+    .stats-gradient-overlay {
+        background: rgba(238, 241, 235, 0.9);
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
