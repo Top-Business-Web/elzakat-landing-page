@@ -666,6 +666,92 @@ body {
 }
 
 /* ==========================================================================
+   COMMITTEE TEAM SECTION (أعضاء وفريق اللجنة)
+   ========================================================================== */
+.team-section {
+    background-color: var(--cream-bg);
+}
+
+.team-member-card {
+    border-radius: 16px;
+}
+
+.team-avatar-wrap {
+    width: 72px;
+    height: 72px;
+}
+
+.team-avatar-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--emerald-primary), var(--emerald-dark));
+    color: #ffffff;
+    font-size: 1.55rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #e7efe9;
+    box-shadow: 0 4px 12px rgba(23, 84, 62, 0.16);
+    overflow: hidden;
+    transition: transform 0.25s ease;
+}
+
+.team-avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member-card:hover .team-avatar-circle {
+    transform: scale(1.05);
+}
+
+.team-verified-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--gold-accent);
+    color: #ffffff;
+    font-size: 0.65rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+}
+
+.team-role-badge {
+    background-color: var(--emerald-light);
+    color: var(--emerald-primary);
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 0.22rem 0.75rem;
+    border-radius: 50px;
+}
+
+.team-member-name {
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: var(--emerald-dark);
+}
+
+.team-member-title {
+    font-size: 0.8rem;
+}
+
+.team-meta-pill {
+    background-color: #f6f5ef;
+    border: 1px solid #e3dfd2;
+    border-radius: 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--emerald-dark);
+}
+
+/* ==========================================================================
    ELECTRONIC HELP REQUEST & RECENT WORKS
    ========================================================================== */
 .help-icon-badge {
@@ -690,29 +776,169 @@ body {
     border-radius: 16px;
 }
 
+.works-filter-nav {
+    background-color: #ffffff;
+    border: 1px solid #dce2d7;
+}
+
+.works-filter-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--text-body);
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 0.22rem 0.75rem;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+}
+
+.works-filter-btn:hover {
+    color: var(--emerald-primary);
+}
+
+.works-filter-btn.active {
+    background-color: var(--emerald-primary);
+    color: #ffffff;
+}
+
 .work-item-card {
     background-color: #ffffff;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid #e4e7e0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
 }
 
 .work-item-card:hover {
     transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(23, 84, 62, 0.1);
 }
 
 .work-img-wrap {
-    height: 92px;
+    height: 112px;
     overflow: hidden;
     background-color: #eae7df;
 }
 
-.work-img-wrap img {
+.work-img-wrap img,
+.work-img-wrap video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+    transition: transform 0.3s ease;
+}
+
+.work-item-card:hover .work-img-wrap img,
+.work-item-card:hover .work-img-wrap video {
+    transform: scale(1.05);
+}
+
+.work-media-badge {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    z-index: 3;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.12rem 0.5rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #ffffff;
+    backdrop-filter: blur(4px);
+}
+
+.work-media-badge.badge-video {
+    background-color: rgba(16, 61, 46, 0.88);
+}
+
+.work-media-badge.badge-image {
+    background-color: rgba(24, 53, 42, 0.72);
+}
+
+.work-play-overlay,
+.work-hover-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s ease, opacity 0.25s ease;
+}
+
+.work-play-overlay {
+    background-color: rgba(16, 61, 46, 0.28);
+}
+
+.work-item-card:hover .work-play-overlay {
+    background-color: rgba(16, 61, 46, 0.42);
+}
+
+.work-play-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.92);
+    color: var(--emerald-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.22s ease, background-color 0.22s ease, color 0.22s ease;
+}
+
+.work-item-card:hover .work-play-circle {
+    transform: scale(1.12);
+    background-color: var(--emerald-primary);
+    color: #ffffff;
+}
+
+.work-hover-overlay {
+    background-color: rgba(16, 61, 46, 0.32);
+    opacity: 0;
+}
+
+.work-item-card:hover .work-hover-overlay {
+    opacity: 1;
+}
+
+.work-action-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--emerald-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.work-modal-media-stage {
+    min-height: 260px;
+    max-height: 440px;
+}
+
+.work-modal-media-stage img,
+.work-modal-media-stage video {
+    width: 100%;
+    max-height: 440px;
+    object-fit: contain;
+    display: block;
+}
+
+.work-modal-media-stage iframe {
+    width: 100%;
+    height: 380px;
+    border: 0;
+    display: block;
 }
 
 .work-title {

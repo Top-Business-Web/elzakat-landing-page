@@ -197,7 +197,7 @@ $(document).ready(function () {
         $('#infoModalTitle').text('عن لجنة زكاة كفر طنبدي');
         $('#infoModalDesc').text(
             'لجنة زكاة كفر طنبدي هي لجنة خيرية رسمية مرخصة من بنك ناصر الاجتماعي برقم (4859/3)، ' +
-            'تعمل تحت إشراف الأستاذ علي دواد المحامي وبمشاركة نخبة من أهل القرية لتوصيل أموال الزكاة والصدقات ' +
+            'تعمل تحت إشراف الأستاذ تامر القصاص وبمشاركة نخبة من أهل القرية لتوصيل أموال الزكاة والصدقات ' +
             'والقروض الحسنة والتبرعات العينية لمستحقيها وفق الضوابط الشرعية وبما يحفظ كرامة الأسر.'
         );
         var modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('infoModal'));
@@ -211,23 +211,129 @@ $(document).ready(function () {
         modal.show();
     });
 
-    // 7. Recent Works Slider Navigation (من أعمالنا الأخيرة)
+    // 7. Recent Works Slider, Media Filter (Images & Videos) & Lightbox Modal (من أعمالنا الأخيرة)
+    var currentWorksFilter = 'all';
+    var maxVisibleWorks = 3;
+
+    function getFilteredWorkCols() {
+        var $allCols = $('#worksSliderContainer').children('.work-slide-col');
+        if (currentWorksFilter === 'all') {
+            return $allCols;
+        }
+        return $allCols.filter('[data-media-type="' + currentWorksFilter + '"]');
+    }
+
+    function refreshWorksVisibleCards(animateEffect) {
+        var $allCols = $('#worksSliderContainer').children('.work-slide-col');
+        var $matching = getFilteredWorkCols();
+
+        $allCols.hide();
+        $matching.slice(0, maxVisibleWorks).each(function () {
+            if (animateEffect) {
+                $(this).stop(true, true).fadeIn(200);
+            } else {
+                $(this).show();
+            }
+        });
+    }
+
+    refreshWorksVisibleCards(false);
+
+    // Filter Buttons (الكل / صور / فيديوهات)
+    $(document).on('click', '.works-filter-btn', function () {
+        $('.works-filter-btn').removeClass('active');
+        $(this).addClass('active');
+        currentWorksFilter = $(this).data('filter') || 'all';
+        refreshWorksVisibleCards(true);
+    });
+
+    // Next / Prev Slider Navigation
     $('#workNextBtn').on('click', function () {
         var $container = $('#worksSliderContainer');
-        var $first = $container.children('.work-slide-col').first();
-        $first.fadeOut(180, function () {
-            $container.append($first);
-            $first.fadeIn(180);
+        var $matching = getFilteredWorkCols();
+        if ($matching.length <= 1) return;
+
+        var $firstMatch = $matching.first();
+        $firstMatch.fadeOut(150, function () {
+            $container.append($firstMatch);
+            refreshWorksVisibleCards(true);
         });
     });
 
     $('#workPrevBtn').on('click', function () {
         var $container = $('#worksSliderContainer');
-        var $last = $container.children('.work-slide-col').last();
-        $last.fadeOut(180, function () {
-            $container.prepend($last);
-            $last.fadeIn(180);
-        });
+        var $matching = getFilteredWorkCols();
+        if ($matching.length <= 1) return;
+
+        var $lastMatch = $matching.last();
+        $container.prepend($lastMatch);
+        refreshWorksVisibleCards(true);
+    });
+
+    // Optional Muted Video Preview on Card Hover
+    $(document).on('mouseenter', '.work-item-card[data-media-type="video"]', function () {
+        var videoEl = $(this).find('video')[0];
+        if (videoEl && typeof videoEl.play === 'function') {
+            videoEl.play().catch(function () {});
+        }
+    }).on('mouseleave', '.work-item-card[data-media-type="video"]', function () {
+        var videoEl = $(this).find('video')[0];
+        if (videoEl && typeof videoEl.pause === 'function') {
+            videoEl.pause();
+            videoEl.currentTime = 0;
+        }
+    });
+
+    // Open Work Media Lightbox Modal (Photo or Video)
+    function getYoutubeEmbedUrl(url) {
+        if (!url) return null;
+        var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        var match = url.match(regExp);
+        return (match && match[2].length === 11) ? 'https://www.youtube.com/embed/' + match[2] + '?autoplay=1' : null;
+    }
+
+    $(document).on('click', '.open-work-media', function () {
+        var $card = $(this);
+        var mediaType = $card.attr('data-media-type') || ($card.find('video').length ? 'video' : 'image');
+        var mediaSrc = $card.attr('data-media-src') || $card.find('video source').attr('src') || $card.find('video').attr('src') || $card.find('img').attr('src') || '';
+        var posterSrc = $card.attr('data-poster') || $card.find('video').attr('poster') || $card.find('img').attr('src') || '';
+        var title = $card.attr('data-title') || $card.find('.work-title').text().trim();
+        var date = $card.attr('data-date') || $card.find('.work-date').text().trim();
+        var desc = $card.attr('data-desc') || '';
+
+        $('#workMediaTitle').text(title);
+        $('#workMediaDate').text(date);
+        $('#workMediaDesc').text(desc).toggle(Boolean(desc));
+
+        var $stage = $('#workModalMediaStage').empty();
+
+        if (mediaType === 'video') {
+            var ytEmbed = getYoutubeEmbedUrl(mediaSrc);
+            if (ytEmbed) {
+                $stage.append('<iframe src="' + ytEmbed + '" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+            } else {
+                var $video = $('<video controls autoplay playsinline></video>');
+                if (posterSrc) {
+                    $video.attr('poster', posterSrc);
+                }
+                $video.append($('<source>').attr('src', mediaSrc).attr('type', 'video/mp4'));
+                $stage.append($video);
+            }
+        } else {
+            var $img = $('<img>').attr('src', mediaSrc).attr('alt', title);
+            $stage.append($img);
+        }
+
+        var modalEl = document.getElementById('workMediaModal');
+        if (modalEl) {
+            var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+            modal.show();
+        }
+    });
+
+    // Stop video playback when media modal closes
+    $('#workMediaModal').on('hidden.bs.modal', function () {
+        $('#workModalMediaStage').empty();
     });
 
     // 8. Animated Number Counters on Scroll (أثر عطائك بالأرقام)
