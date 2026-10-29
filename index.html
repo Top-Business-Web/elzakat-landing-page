@@ -13,7 +13,7 @@
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=7">
+    <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
@@ -45,48 +45,37 @@
                             <a class="nav-link active" href="#hero">الرئيسية</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#zakat-guide">عن الزكاة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">خدماتنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#donation-methods">وسائل التبرع</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#stats">التقارير</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#about">عن اللجنة</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#team">فريق اللجنة</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#services">خدماتنا</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contribute">طرق المساهمة</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#works">المشاريع والإنجازات</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#stats">التقارير</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#contact">تواصل معنا</a>
                         </li>
                     </ul>
 
-                    <!-- Left Actions: Donate + Search -->
+                    <!-- Left Actions: Donate -->
                     <div class="nav-actions d-flex align-items-center gap-3">
                         <button type="button" class="btn btn-emerald rounded-pill px-4 py-2 d-flex align-items-center gap-2 open-donate-modal" data-type="تبرع عام">
                             <i class="fa-solid fa-heart"></i>
                             <span>تبرع الآن</span>
                         </button>
-                        <button type="button" class="btn-search-toggle" id="searchToggleBtn" aria-label="بحث">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
                     </div>
                 </div>
             </nav>
-
-            <!-- Collapsible Search Bar (jQuery toggled) -->
-            <div id="headerSearchBar" class="header-search-bar" style="display: none;">
-                <form class="d-flex gap-2 py-2" id="searchForm">
-                    <input type="text" class="form-control form-control-sm rounded-pill px-3" placeholder="ابحث في خدمات ومشاريع اللجنة...">
-                    <button type="submit" class="btn btn-sm btn-emerald rounded-pill px-3">بحث</button>
-                </form>
-            </div>
         </div>
     </header>
 
@@ -1297,12 +1286,12 @@
     <div class="modal fade" id="donateModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4 border-0">
-                <div class="modal-header border-bottom-0 pb-0">
+                <div class="modal-header border-bottom-0 pb-0 d-flex align-items-center justify-content-between">
                     <h5 class="modal-title fw-bold text-emerald">
                         <i class="fa-solid fa-heart me-1"></i>
                         المساهمة والتبرع - <span id="donateModalType">الصدقات</span>
                     </h5>
-                    <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="إغلاق"></button>
                 </div>
                 <div class="modal-body pt-3">
                     <form id="donateForm">
@@ -1342,12 +1331,12 @@
     <div class="modal fade" id="helpRequestModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4 border-0">
-                <div class="modal-header border-bottom-0 pb-0">
+                <div class="modal-header border-bottom-0 pb-0 d-flex align-items-center justify-content-between">
                     <h5 class="modal-title fw-bold text-emerald">
                         <i class="fa-regular fa-file-lines me-1"></i>
                         نموذج طلب مساعدة إلكتروني
                     </h5>
-                    <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="إغلاق"></button>
                 </div>
                 <div class="modal-body pt-3">
                     <form id="helpRequestForm">
@@ -1393,9 +1382,9 @@
     <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4 border-0">
-                <div class="modal-header border-bottom-0 pb-0">
+                <div class="modal-header border-bottom-0 pb-0 d-flex align-items-center justify-content-between">
                     <h5 class="modal-title fw-bold text-emerald" id="infoModalTitle">لجنة زكاة كفر طنبدي</h5>
-                    <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="إغلاق"></button>
                 </div>
                 <div class="modal-body pt-3">
                     <p id="infoModalDesc" class="text-secondary lh-lg mb-3"></p>
@@ -1412,12 +1401,12 @@
     <div class="modal fade" id="workMediaModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content rounded-4 border-0 overflow-hidden">
-                <div class="modal-header border-bottom-0 pb-2">
+                <div class="modal-header border-bottom-0 pb-2 d-flex align-items-center justify-content-between">
                     <div>
                         <h5 class="modal-title fw-bold text-emerald mb-0" id="workMediaTitle">من أعمال اللجنة</h5>
                         <small class="text-muted fw-semibold" id="workMediaDate"></small>
                     </div>
-                    <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="إغلاق"></button>
                 </div>
                 <div class="modal-body pt-0">
                     <!-- Media Container (Image or Video or YouTube Embed) -->
